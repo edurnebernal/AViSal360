@@ -5,7 +5,7 @@ import datetime
 import os
 import time
 from torch.utils.data import DataLoader
-import model
+from model import AViSal360
 
 # Import config file
 import config
@@ -140,7 +140,7 @@ if __name__ == '__main__':
     
     for fold in k_folds:
         # Create the model
-        avisal360 = model.AVSal_IB4LconAEM_2SP(input_dim=3, hidden_dim=config.hidden_dim, output_dim=1)
+        avisal360 = AViSal360(input_dim=3, hidden_dim=config.hidden_dim, output_dim=1)
 
         videos_train_file = os.path.join(config.k_folds_dir, fold)
 
