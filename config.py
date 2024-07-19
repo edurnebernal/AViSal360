@@ -27,7 +27,7 @@ batch_size = 1
 epochs = 120
 # Learning rate
 lr = 0.8
-# Hidden dimension of the model (SST-Sal uses hidden_dim=36)
+# Hidden dimension of the model
 hidden_dim = 36
 # Name of the model
 model_name = 'AViSal360'
