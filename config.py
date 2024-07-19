@@ -11,7 +11,7 @@ frames_dir = 'data/frames'
 optical_flow_dir = 'data/optical_flow'
 # Path to the folder containing the AEMs
 audio_AEM_dir = 'data/AEM'
-# Path to the folder containing the ImageBind embbedings
+# Path to the folder containing the ImageBind embeddings
 embeddings_dir = 'data/embeddings'
 # Path to the folder containing the ground truth saliency maps
 gt_dir = 'data/saliency_maps'
