@@ -30,7 +30,7 @@ torchvision==0.14.1+cu116
 tqdm==4.64.0
 ```
 
-## Proposed Audio Energy Maps
+#### Proposed Audio Energy Maps
 Details about our proposed audio energy maps are provided in the [supplementary material](https://nas-graphics.unizar.es/s/8WcJBwaJM2PNPE2). You can access the code for generating the AEMs at our GitHub repository: [AmbisonicPowermapTest](https://github.com/R3Ngfx/AmbisonicPowermapTest).
 
 # Training Data
