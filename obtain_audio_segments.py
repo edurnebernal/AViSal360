@@ -25,7 +25,7 @@ OUT_AUDIO_SEGMENTS = './data/DSAV360/audio_segments'
 OUT_LOGMEL = './data/DSAV360/logMel_images'
 FRAMES_TEMPORAL_WINDOW = 20
 FPS = 60
-EXTRACT_LOGMEL = True
+EXTRACT_LOGMEL = False
 
 
 videos = os.listdir(PATH_TO_FRAMES)
@@ -75,18 +75,3 @@ for video in tqdm.tqdm(videos):
         if EXTRACT_LOGMEL:
             logMel_image = compute_log_mel(audio_segment)
             cv2.imwrite(os.path.join(OUT_LOGMEL, video, frame.split('.')[0] + '.png'), logMel_image)
-
-        #** TO DEBUGGING PURPOSES **#
-        # # Save the correspondent video segment
-        # # Read all the frames on the segment and save them in a video
-        # frames_segment = frames[nf-FRAMES_TEMPORAL_WINDOW:nf+1]
-        # frames_segment = [os.path.join(OUT_AUDIO_SEGMENTS, video, frame) for frame in frames_segment]
-        # frames_segment = [cv2.imread(frame) for frame in frames_segment]
-
-        # # Create the video writer object and save the video
-        # height, width, layers = frames_segment[0].shape
-        # size = (width, height)
-        # out = cv2.VideoWriter(os.path.join(OUT_AUDIO_SEGMENTS, video, frame.split('.')[0] + '.avi'), cv2.VideoWriter_fourcc(*'DIVX'), 8, size)
-        # for frame in frames_segment:
-        #     out.write(frame)
-        # out.release()
