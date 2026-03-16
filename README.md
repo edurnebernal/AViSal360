@@ -32,3 +32,6 @@ tqdm==4.64.0
 
 ## Proposed Audio Energy Maps
 Details about our proposed audio energy maps are provided in the [supplementary material](https://nas-graphics.unizar.es/s/8WcJBwaJM2PNPE2). You can access the code for generating the AEMs at our GitHub repository: [AmbisonicPowermapTest](https://github.com/R3Ngfx/AmbisonicPowermapTest).
+
+# Training Data
+Preprocessed training data can be found in this [folder](https://nas-graphics.unizar.es/s/data_AViSal360). If you use this data, please cite the dataset publication [D-SAV360](https://graphics.unizar.es/projects/D-SAV360/dataset_index.html). The folder includes the following data: audio segments used to extract LogMel spectrograms, the LogMel spectrograms provided as input to ImageBind, the audio embeddings produced by ImageBind, our proposed AEMs, extracted video frames, and the computed saliency maps.
