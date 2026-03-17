@@ -3,13 +3,12 @@ import torch.nn as nn
 import torch
 from spherenet import SphereConv2D
 
-class AVSal_IB4LconAEM_2SP(nn.Module):
-    # TODO: test multipliying instead of concatenating
+class AViSal360(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=18, output_dim=1, option='train'):
-        super(AVSal_IB4LconAEM_2SP, self).__init__()
+        super(AViSal360, self).__init__()
 
-        self.encoder = Modules.SpherConvLSTM_EncoderCell(input_dim, hidden_dim)
-        self.decoder = Modules.SpherConvLSTM_DecoderCell(hidden_dim, output_dim)
+        self.encoder = modules.SpherConvLSTM_EncoderCell(input_dim, hidden_dim)
+        self.decoder = modules.SpherConvLSTM_DecoderCell(hidden_dim, output_dim)
         
         self.mode = option
         # Create two dense layers to reduce the embedding dimensionality to 32

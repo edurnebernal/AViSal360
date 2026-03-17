@@ -162,5 +162,5 @@ if __name__ == '__main__':
         train_data = DataLoader(train_video360_dataset, batch_size=config.batch_size, num_workers=20, shuffle=True)
 
         print(avisal360)
-        model = train(train_data, avisal360, device, loss, lr=config.lr, EPOCHS=config.epochs,model_name='AVIONES_sinOF_a075_e120' + fold, checkpoint=None)
+        model = train(train_data, avisal360, device, loss, lr=config.lr, EPOCHS=config.epochs,model_name='avisal360' + fold, checkpoint=None)
         print("Training finished")
